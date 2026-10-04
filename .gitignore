@@ -1,0 +1,6 @@
+*.exe
+install-result.json
+verification.json
+*.csv
+*.previous
+.local-test/

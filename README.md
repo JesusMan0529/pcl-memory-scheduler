@@ -1,5 +1,7 @@
 # pcl-memory-scheduler
 
+<p align="center"><img src="assets/pcl-icon.png" alt="PCL 图标" width="96"></p>
+
 我写这个小工具，是为了定时调用 Plain Craft Launcher（PCL）里的“内存优化”，省去手动打开百宝箱、点击按钮的步骤。它使用 PCL 自带的 `--memory` 启动参数；它是独立工具，不是 PCL 官方插件，也没有修改 PCL 本体。
 
 安装后，Windows 会在开机约 30 秒后启动后台程序。它立即调用一次 PCL，此后每 5 分钟调用一次。后台程序没有窗口，在任务管理器“详细信息”里叫 `MemoryScheduler.exe`。每次优化时会短暂出现 `Plain Craft Launcher 2.exe`。
@@ -40,6 +42,6 @@
 
 ## 实现与验证
 
-PCL 的[启动代码](https://github.com/Meloong-Git/PCL/blob/main/Plain%20Craft%20Launcher%202/Application.xaml.vb)提供 `--memory` 参数，调用内存优化后退出。本项目只调用这个参数，仓库不包含 PCL 源码或安装包。源码包括 `MemoryScheduler.cs`、`Install.ps1` 和 `Uninstall.ps1`，不需要额外下载编译工具。
+PCL 的[启动代码](https://github.com/Meloong-Git/PCL/blob/main/Plain%20Craft%20Launcher%202/Application.xaml.vb)提供 `--memory` 参数，调用内存优化后退出。本项目只调用这个参数，仓库不包含 PCL 源码或安装包。README 图标由 PCL 官方仓库的 [icon.ico](https://github.com/Meloong-Git/PCL/blob/main/Plain%20Craft%20Launcher%202/Images/icon.ico) 转为透明 PNG。源码包括 `MemoryScheduler.cs`、`Install.ps1` 和 `Uninstall.ps1`，不需要额外下载编译工具。
 
 2026-10-04，我在 Windows 上验证了 C# 编译、PowerShell 脚本语法，以及两次后台调用成功且相隔约 300 秒。把 PCL 可执行文件复制到独立目录后，`--memory` 入口仍可启动；未提权测试会显示 PCL 自己的管理员权限提示。仓库版本的完整安装和实际重启后的启动尚未验证。

@@ -4,3 +4,4 @@ verification.json
 *.csv
 *.previous
 .local-test/
+assets/pcl-official.ico

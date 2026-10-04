@@ -1,6 +1,5 @@
-# pcl-memory-scheduler
-
-<p align="center"><img src="assets/pcl-icon.png" alt="PCL 图标" width="96"></p>
+<p align="center"><img src="assets/pcl-icon-transparent.png" alt="PCL 图标" width="96"></p>
+<h1 align="center">pcl-memory-scheduler</h1>
 
 我写这个小工具，是为了定时调用 Plain Craft Launcher（PCL）里的“内存优化”，省去手动打开百宝箱、点击按钮的步骤。它使用 PCL 自带的 `--memory` 启动参数；它是独立工具，不是 PCL 官方插件，也没有修改 PCL 本体。
 
